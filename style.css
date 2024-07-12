@@ -54,20 +54,22 @@ body,html {
   width: 20%;
 }
 .togglenav>.topdiv>div:first-child>div{
-  background: yellowgreen;
-  width: 45px;
-  height: 45px;
+  background: rgba(175, 205, 128, 1);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.bordernone{
+  border: none!important;
 }
 .togglenav>.topdiv>div:last-child{
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  
 }
 .togglenav>.topdiv>div:last-child>div{
   background: blue;
@@ -274,21 +276,21 @@ body,html {
   color: #ededed;
   z-index: -1;
 
-
   background-image: url(./images/Group\ 442.png);
   background-repeat: no-repeat;
   background-size:contain;
   background-position: cover;
-  background-position-x: center;
+  background-position-x: left;
   background-blend-mode: multiply !important;
   /* background-blend-mode is not working */
   
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   color: #111;
   flex-direction: column;
+  margin-left: 30px;
 }
 
 .box-list {
@@ -344,6 +346,7 @@ body,html {
 
   display: flex;
   align-items: flex-end;
+
 }
 
 .gotoDownWrper>div{
@@ -356,6 +359,7 @@ body,html {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.36);
 
   color: blue;
 }
@@ -798,6 +802,17 @@ a:focus {
   border-radius: 50%;
 }
 @media only screen and (max-width: 767px) {
+
+
+
+  .div-index {
+    background-position-x: center;
+    align-items: center;
+    margin-left: 0;
+  }
+  
+
+
   .panel-2 .panel-heading .title {
     text-align: center;
     margin: 0 0 10px;

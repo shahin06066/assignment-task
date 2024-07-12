@@ -6,18 +6,19 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-  font-family: "IBM Plex Mono", monospace;
-  font-family: "Oswald", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Roboto", sans-serif;
 }
+
 body,html {
   background-color: #ededed;
   color: white;
-  /* width: 100%;
-  height: auto; */
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
 }
+
+/* h1,h2{
+  font-family: 'La Nantes', sans-serif;
+} */
 /* home starts here */
 
 /* toggle navber css code here */
@@ -29,10 +30,10 @@ body,html {
   height: fit-content;
   min-height: 400px;
   background: #fff;
-  z-index: 100;
   display: none;
   border-radius: 20px;
   padding: 15px;
+  z-index: 100 !important;
 }
 
 
@@ -72,6 +73,7 @@ body,html {
   padding: 10px 15px;
   font-size: 13px;
   text-align: center;
+  
 }
 
 
@@ -101,10 +103,12 @@ body,html {
 
 .home-section {
   padding: 10px;
-  height: 618px;
+  height: 718px;
   width: 100%;
   background-color: #2042b6;
   color: white;
+
+  
 }
 
 .home-page {
@@ -112,11 +116,12 @@ body,html {
   display: flex;
   gap: 20px;
   justify-content: space-between;
-  height: 95%;
+  height: 90%;
   width: 100%;
 
-
+ 
   position: relative;
+  z-index: 0;
 }
 
 .home-page>div{
@@ -125,7 +130,8 @@ body,html {
 }
 
 .home-bg-img{
-  height: 100%;
+  height: auto;
+  
 }
 
 .box-list{
@@ -143,6 +149,7 @@ body,html {
   width: 100%;
   padding: 5px;
   justify-content: center;
+  z-index: 80;
 
 }
 
@@ -213,6 +220,10 @@ body,html {
     display: flex;
     height: 26px;
   }
+  .logo-2 img {
+    display: flex;
+    height: 26px !important;
+  }
 
   .fa-share-nodes {
     font-size: 14px;
@@ -258,6 +269,7 @@ body,html {
   width: 100%;
   height: auto;
   color: #ededed;
+  z-index: -1;
 
 
   background-image: url(./images/Group\ 442.png);
@@ -265,7 +277,9 @@ body,html {
   background-size:contain;
   background-position: cover;
   background-position-x: center;
-
+  background-blend-mode: multiply !important;
+  /* background-blend-mode is not working */
+  
 
   display: flex;
   align-items: center;
@@ -373,7 +387,7 @@ body,html {
 
 @media (max-width: 520px) {
   .home-bg-img {
-    /* height: auto; */
+    height: auto;
     width: 100%;
   }
  
@@ -939,6 +953,15 @@ margin-top: 25px !important;
   .Future-Listingis >h1{
     font-size: 25px;
   }
+  .togglenav{
+    width: 220px;
+  }
+  .togglenav>.topdiv{
+    gap: 5px;
+  }
+  .togglenav>.topdiv>div:last-child>div{
+    padding: 5px;
+  }
   .aside-section{
     margin-top: 30px;
     padding: 0px 10px;
@@ -1355,6 +1378,12 @@ margin-top: 25px !important;
   #seventh-aside{
     width: 50%;
   }
+
+
+  .grid-container {
+    
+    grid-template-columns: 1fr!important;
+  }
   
 }
 
@@ -1412,7 +1441,7 @@ height: 300px;
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: rgba(230, 230, 230, 1);
   padding: 10px;
 }
@@ -1458,12 +1487,8 @@ height: 300px;
 }
 
 @media (max-width:992px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-   
-  }
+
+ 
   .grid-item {
    
     padding: 10px;
@@ -1473,6 +1498,9 @@ height: 300px;
   }
   
 }
+
+
+
 
 
 
